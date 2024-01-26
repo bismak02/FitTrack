@@ -34,4 +34,4 @@
 * In the event of conflicts, mediation will be sought, and efforts will be made to find a resolution that is fair and agreeable to all parties involved.
 
 ---
-
+Martin Grill Poblete, mpoblete@hawk.iit.edu
