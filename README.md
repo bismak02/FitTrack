@@ -5,7 +5,7 @@ Private team repo for ITMT 430 Spring 2024 project
 * L04
 
 # Team members 
-* Sufyan Khan
+* Sufyan Faisal Khan Yousuf Zai
 * Bisma Khan
 * Mbargou Gueye
 * Martin Grill-Poblete
