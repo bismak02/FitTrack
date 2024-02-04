@@ -1,3 +1,6 @@
+Font Type:
+Entire site will feature Futura Font
+
 Color Scheme:
 Primary Color: #3498db (Royal Blue)
 Secondary Color: #2ecc71 (Emerald Green)
@@ -17,9 +20,11 @@ a. Signup/Login Page:
 Input fields for username and password on login page
 Input fields for name, email, username, password on sign up page
 Button: Login
+![signup](images/IMG_5895.jpg)
 
 b. Dashboard:
 Overview of daily/weekly progress
+![dashboard](images/IMG_5894.jpg)
 
 c. Log Exercise/Food:
 Dropdowns for exercise type, and intensity. 
@@ -28,11 +33,14 @@ Button: Log Exercise
 Dropdown for food type
 Input Field: food amount
 Button: Log Food
+![log](images/IMG_5896.jpg)
 
 d. Profile Page:
 View and edit personal information
 Input Boxes: Change username, change email, change password, change name
 Button: Save Changes
+![profile](images/IMG_5893.jpg)
+
 
 User Table:
 
