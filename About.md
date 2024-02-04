@@ -13,7 +13,7 @@ This project aims to create a user-friendly app that can be accessed globally. T
 The goals and objectives are to provide a reliable and secure platform for users to monitor and enhance their fitness and nutrition routines. Please take a look at the project charter for detailed goals.
 
 ## 1.4. Stakeholders and Key Personnel
-Key stakeholders include users, fitness experts, nutritionists, and the development team. The project charter details specific roles and responsibilities.
+Key stakeholders include users, fitness experts, nutritionists, the development team, the UI/UX tester, the IT operator, the Project manager, and Professor Jeremy. The project charter details specific roles and responsibilities.
 
 ## 2. Project Organization
 The project will be organized into sprints, rotating team roles to cover various aspects like management, development, UI/UX, and IT operations. Please take a look at the project charter for the organizational structure.
