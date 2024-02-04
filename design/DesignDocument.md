@@ -109,3 +109,6 @@ These databases store the essential information required for the Fitness Tracker
   - Progress (Description or amount of progress)
   - ProgressAmount (Numeric representation of progress)
 
+## ERD Diagram:
+![*ERD Diagram Sprint 1*](./images/ERD_Diagram-Sprint1.png "ERD Diagram")
+
