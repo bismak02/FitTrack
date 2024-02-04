@@ -17,53 +17,65 @@ Pages and Functions:
 
 Home Button directs to Dashboard, User Button directs to Profile Page, “Graph” Button directs to Log Page
 
-a. Signup/Login Page:
+## a. Signup/Login Page:
 Input fields for username and password on login page
 Input fields for name, email, username, password on sign up page
 Button: Login
-![signup](images/IMG_5895.jpg)
+![*Login Page Concept*](./images/sign-up-page.jpg "Login Page")
 
-b. Dashboard:
+## b. Dashboard:
 Overview of daily/weekly progress
-![dashboard](images/IMG_5894.jpg)
+![*Progress/Goal Page Concept*](./images/progress-page.jpg "Progress/Goal Page")
 
-c. Log Exercise/Food:
+## c. Log Exercise/Food:
 Dropdowns for exercise type, and intensity. 
 Input Field: Duration
 Button: Log Exercise
 Dropdown for food type
 Input Field: food amount
 Button: Log Food
-![log](images/IMG_5896.jpg)
+![*Exercise/Food Log Page Concept*](./images/log-page.jpg "Exercise/Food Log Page")
 
-d. Profile Page:
+
+## d. Profile Page:
 View and edit personal information
 Input Boxes: Change username, change email, change password, change name
 Button: Save Changes
-![profile](images/IMG_5893.jpg)
+![*Settings Page Concept*](./images/settings-page.jpg "Settings Page")
 
 
-User Table:
+## DB Schema:
+These databases are where we will store information for the Fitness Tracker to function properly.
 
-UserID (Primary Key)
-FullName
-Username
-Email
-Password
+In the User Table all the users will be stored. 
 
-Exercise Log Table:
-LogID (Primary Key)
-UserID (Foreign Key)
-ExerciseType
-Duration
-Intensity
-Date
+In the exercise log table we will store the exercises that each user logs.
 
-Nutrition Log Table:
-LogID (Primary Key)
-UserID (Foreign Key)
-FoodItem
-Quantity
-Calories
-Date
+In the nutrition table we will store the foods that the user has logged.
+
+    User Table {
+        UserID (Primary Key)
+        FullName
+        Username
+        Email
+        Password
+    }
+
+    Exercise Log Table {
+        ExerciseID (Primary Key)
+        UserID (Foreign Key)
+        ExerciseType
+        Duration
+        Intensity
+        Date
+    }
+
+    Nutrition Log Table{
+        FoodID (Primary Key)
+        UserID (Foreign Key)
+        FoodItem
+        Quantity
+        Calories
+        Date
+    }
 
