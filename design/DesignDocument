@@ -20,12 +20,13 @@ Button: Login
 
 b. Dashboard:
 Overview of daily/weekly progress
-Visual representation of fitness goals
 
 c. Log Exercise/Food:
-Dropdowns for exercise type, duration, and intensity
+Dropdowns for exercise type, and intensity. 
+Input Field: Duration
 Button: Log Exercise
-Dropdowns for food type, and input field for calorie amount
+Dropdown for food type
+Input Field: food amount
 Button: Log Food
 
 d. Profile Page:
@@ -47,6 +48,7 @@ UserID (Foreign Key)
 ExerciseType
 Duration
 Intensity
+Date
 
 Nutrition Log Table:
 LogID (Primary Key)
@@ -54,4 +56,5 @@ UserID (Foreign Key)
 FoodItem
 Quantity
 Calories
+Date
 
