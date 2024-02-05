@@ -45,12 +45,12 @@ This report summarizes the contributions and achievements of our team during Spr
 #### UIUX Design Document
 - Contributor Azzam Abu Hamdan
 - Description Created detailed UIUX design documents, setting a solid foundation for our application's interface and user experience.
-- Artifact ![Placeholder Image for UIUX Design](pathtouiux_design_image)
+- Artifact ![Image for UIUX Design](./images/sign-up-page.jpg)
 
 #### Entity Relationship Diagram (ERD)
 - Contributors Martin Grill Poblete, Mbargou Gueye
 - Description Drafted an ERD to outline our database schema, crucial for the application's data management strategy.
-- Artifact ![Placeholder Image for ERD](pathtoerd_image)
+- Artifact ![Image for Entity Relationship Diagram](./images/ERD_Diagram-Sprint1.png)
 
 ### Task Management
 
