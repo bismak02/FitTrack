@@ -57,7 +57,7 @@ This report summarizes the contributions and achievements of our team during Spr
 #### Application Tasks Listing
 - Contributor Mbargou Gueye
 - Description Broke down the project into manageable tasks, listed in our project management tool to guide our development efforts.
-- Artifact ![Placeholder Image for Task Listing](pathtotask_listing_image)
+- Artifact ![Image for Task Listing](./images/atomic-tasks.png)
 
 ## Conclusion
 
