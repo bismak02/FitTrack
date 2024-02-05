@@ -11,7 +11,7 @@ This report summarizes the contributions and achievements of our team during Spr
 #### Trello Setup
 - Contributors Sufyan Khan, Bisma Khan
 - Description Established our project management framework using Trello, ensuring a smooth workflow and effective task tracking.
-- Artifact ![Placeholder Image for Trello Setup](pathtotrello_setup_image)
+- Artifact ![Image for Trello Setup](./images/trello-setup.png)
 
 #### Discord Setup
 - Contributor Sufyan Khan
