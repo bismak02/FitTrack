@@ -16,7 +16,7 @@ This report summarizes the contributions and achievements of our team during Spr
 #### Discord Setup
 - Contributor Sufyan Khan
 - Description Configured Discord for team communication, integrating notifications from Trello and GitHub to streamline our collaboration.
-- Artifact ![Placeholder Image for Discord Setup](pathtodiscord_setup_image)
+- Artifact ![Image for Discord Setup](./images/group-discord.png)
 
 ### Documentation and Team Guidelines
 
