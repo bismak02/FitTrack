@@ -23,22 +23,22 @@ This report summarizes the contributions and achievements of our team during Spr
 #### Team Charter
 - Contributor Bisma Khan
 - Description Drafted a comprehensive Team Charter to outline our collaboration protocols, work ethics, and conflict resolution strategies.
-- Artifact ![Placeholder Image for Team Charter](pathtoteam_charter_image)
+- Artifact ![Image for Team Charter](./images/team-charter.png)
 
 #### Project `.gitignore`
 - Contributor Martin Grill Poblete
 - Description Created a `.gitignore` file to maintain our repository's integrity by excluding unnecessary files and sensitive information.
-- Artifact ![Placeholder Image for .gitignore](pathtogitignore_image)
+- Artifact ![Image for .gitignore](./images/gitignore.png)
 
 #### Project `Readme.md`
 - Contributor Martin Grill Poblete
 - Description Compiled a `Readme.md` for our repository, detailing team composition and project objectives.
-- Artifact ![Placeholder Image for Readme.md](pathtoreadme_image)
+- Artifact ![Image for Readme](./images/readme.png)
 
 #### Project `About.md`
 - Contributor Sufyan Khan
 - Description Developed an `About.md` document to define the scope and general function of our proposed project.
-- Artifact ![Placeholder Image for About.md](pathtoaboutmd_image)
+- Artifact ![Image for About](./images/about.png)
 
 ### Design and Planning
 
