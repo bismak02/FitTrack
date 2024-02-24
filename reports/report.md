@@ -1,5 +1,20 @@
 # Sprint-01 Project Manager Report
 
+
+## Project Manager and Team Roles
+Throughout the development process, our team will operate in sprints. In each sprint, team members will take on different roles, ensuring that each person contributes to all project areas. Here are the roles to be assigned:
+
+### Project Manager - Sufyan Khan
+
+### Developer 1 - Martin
+
+### Developer 2 - Mbargou Gueye
+
+### UI/UX and User Testing - Azzam Abu Hamdan
+
+### IT Operations and Security - Bisma Khan
+
+
 ## Introduction
 
 This report summarizes the contributions and achievements of our team during Sprint-01. Our objectives were to set up our project's foundational tools, outline the design for our three-tier web application, and foster a collaborative working environment. This document highlights the tasks assigned and completed by each team member, emphasizing our progress towards these goals.
