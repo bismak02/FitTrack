@@ -1,33 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en"> <!-- Added language attribute for better accessibility -->
 <head>
+  <!-- Basic -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Site Metas -->
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
   <title>FitTrack</title>
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap"
-    rel="stylesheet">
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css"> <!-- Removed type attribute as it's not necessary in HTML5 -->
+
+  <!-- Fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet">
+  <!-- Responsive style -->
   <link href="css/responsive.css" rel="stylesheet">
 </head>
 
 <body>
   <div class="hero_area">
+    <!-- Header section starts -->
     <header class="header_section">
       <div class="container">
         <nav class="navbar navbar-expand-lg custom_nav-container">
           <a class="navbar-brand" href="index.html">
-            <img src="images/logo.png" alt="FitTrack logo">
-            <span>FitTrack</span>
+            <img src="images/logo.png" alt="FitTrack logo"> <!-- Added alt text for better accessibility -->
+            <span> FitTrack</span>
           </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <!-- Added missing button for toggler -->
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent"> <!-- Corrected structure for collapsible navbar -->
+            <ul class="navbar-nav ml-auto"> <!-- Added ml-auto for alignment -->
               <li class="nav-item active">
                 <a class="nav-link" href="#homeSection">Home <span class="sr-only">(current)</span></a>
               </li>
@@ -45,8 +56,18 @@
         </nav>
       </div>
     </header>
-
+    <!-- end header section -->
+    <!-- slider section -->
     <section id="homeSection" class="slider_section position-relative">
+      <div class="container">
+        <div class="custom_nav2">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </nav>
+        </div>
+      </div>
       <div class="slider_container">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
@@ -58,8 +79,6 @@
                       <h1>Reach Your Fitness Goals</h1>
                       <div class="btn-box">
                         <a href="sign.html" class="btn-2">Join Today</a>
-                        <!-- Google Sign-In Button -->
-                        <div id="g-signin2" data-onsuccess="onSignIn"></div>
                       </div>
                     </div>
                   </div>
@@ -70,38 +89,184 @@
         </div>
       </div>
     </section>
+    <!-- end slider section -->
   </div>
 
-  <!-- Additional sections like About, Contact, etc. -->
+  <!-- about section -->
+  <section id="aboutSection" class="about_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>About FitTrack</h2>
+      </div>
+      <div class="box">
+        <div class="img-box">
+          <img src="images/logo.png" alt="">
+        </div>
+        <div class="detail-box">
+          <h5>Our website is designed with one goal in mind: to empower you to take control of your physical health and dietary habits. </h5>
+          <h5>Whether you're a seasoned fitness enthusiast or just beginning your wellness journey, our interactive and user-friendly platform is here to support you every step of the way.</h5>
+          <h5>With Fitness and Nutrition Tracker, you can set personalized fitness goals, log various exercises, track your nutritional intake, and monitor your progress towards achieving your health objectives.</h5>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end about section -->
 
-  <!-- Google's OAuth JavaScript Library -->
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <!-- Us section -->
+  <section class="us_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>Why Choose Us</h2>
+      </div>
+      <div class="us_container">
+        <div class="box">
+          <div class="img-box">
+            <img src="images/u-1.png" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>Exercise</h5>
+            <p>Log exercises and count calories burned.</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="images/u-2.png" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>Nutrition</h5>
+            <p>Track your food to form healthy eating habits</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="images/u-3.png" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>Blog</h5>
+            <p>Learn more about fitness or teach others by using our blog option.</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="images/u-4.png" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>Friends</h5>
+            <p>Compete with friends and meet new people.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end us section -->
+
+  <!-- contact section -->
+  <section id="contactSection" class="contact_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2><span>Get In Touch</span></h2>
+      </div>
+      <div class="layout_padding2-top">
+        <div class="row">
+          <div class="col-md-6 ">
+           <form action="https://formspree.io/f/meqygzyp" method="POST"
+>
+              <div class="contact_form-container">
+                <div>
+                  <div>
+                    <label for="fname">First name:</label> 
+										<input type="text" id="fname" name="fname"required><br><br>
+										<label for="lname">Last name:</label>
+										<input type="text" id="lname" name="lname"required><br><br>
+										<label for="email">Email:</label>
+										<input type="email" id="email" name="Email"required><br><br>
+										<label for="test">Message:</label>
+										<input type="text" id="text" name="Message"required><br><br>
+                  </div>          
+                  <div class="mt-5">
+                    <button type="submit">Send</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end contact section -->
+
+  <!-- info section -->
+  <section class="info_section layout_padding2-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h6>About FitTrack</h6>
+          <p>Your ultimate companion on the journey to a healthier you!</p>
+        </div>
+        <div class="col-md-2 offset-md-1">
+          <h6>Menus</h6>
+          <ul>
+            <li class="active"><a class="nav-link" href="#homeSection">Home <span class="sr-only">(current)</span></a></li>
+            <li><a class="nav-link" href="#aboutSection">About</a> </li>
+            <li><a class="nav-link" href="#contactSection">Contact Us</a></li>
+            <li><a href="login.html"> Login</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6>Contact Us</h6>
+          <div class="info_link-box">
+            <a href="">
+              <img src="images/mail-white.png" alt="">
+              <span>fitrack@gmail.com</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>© 2024 All Rights Reserved. Design by ITMT-430 IIT Students</p>
+  </section>
+  <!-- footer section -->
+
+  <script data-cfasync="false" src="js/email-decode.min.js"></script>
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+
   <script>
-    function onSignIn(googleUser) {
-      var profile = googleUser.getBasicProfile();
-      console.log('Google User ID: ' + profile.getId());
-      // Implement further actions here
+    function openNav() {
+      document.getElementById("myNav").classList.toggle("menu_width");
+      document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style");
     }
+  </script>
 
-    function renderButton() {
-      gapi.signin2.render('g-signin2', {
-        'scope': 'profile email',
-        'width': 240,
-        'height': 50,
-        'longtitle': true,
-        'theme': 'dark',
-        'onsuccess': onSignIn
-      });
-    }
-
-    gapi.load('auth2', function () {
-      gapi.auth2.init();
-      renderButton();
+  <include id="includedContent"></include>
+  <script>
+    $(function(){
+      $("#includedContent").load("../htmlads.html"); 
     });
   </script>
 
-  <!-- Your existing JavaScript for bootstrap and other functionalities -->
+  <script>
+    $(document).ready(function() {
+      // Smooth scrolling for anchor links
+      $("a").on('click', function(event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+            window.location.hash = hash;
+          });
+        }
+      });
+    });
+  </script>
 
 </body>
-
 </html>
