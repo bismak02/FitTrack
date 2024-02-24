@@ -59,11 +59,6 @@
         </nav>
       </div>
     </header>
-    <!-- Google Sign-In Button Placeholder -->
-    <!-- Place this div where you want the Google sign-in button to appear -->
-    <div class="container text-center" style="padding: 20px;">
-      <div id="g-signin2" data-onsuccess="onSignIn"></div>
-    </div>
     <!-- end header section -->
     <!-- slider section -->
     <section id="homeSection" class="slider_section position-relative">
@@ -277,6 +272,32 @@
       });
     });
   </script>
+  
+  <script>
+    function onSignIn(googleUser) {
+      var profile = googleUser.getBasicProfile();
+      console.log('Google User ID: ' + profile.getId());
+      // Here, you can handle the sign-in further, like sending info to your server
+    }
+
+    function renderButton() {
+      gapi.signin2.render('g-signin2', {
+        'scope': 'profile email',
+        'width': 240,
+        'height': 50,
+        'longtitle': true,
+        'theme': 'dark',
+        'onsuccess': onSignIn
+      });
+    }
+
+    gapi.load('auth2', function () {
+      gapi.auth2.init().then(function () {
+        renderButton();
+      });
+    });
+  </script>
+
 
 </body>
 </html>
