@@ -22,6 +22,9 @@
   <link href="css/style.css" rel="stylesheet">
   <!-- Responsive style -->
   <link href="css/responsive.css" rel="stylesheet">
+  <!-- Start: Google OAuth Script added by gueye-->
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <!-- End: Google OAuth Script -->
 </head>
 
 <body>
@@ -79,6 +82,8 @@
                       <h1>Reach Your Fitness Goals</h1>
                       <div class="btn-box">
                         <a href="sign.html" class="btn-2">Join Today</a>
+                        <!--Google Sign-In Button Placeholder Gueye -->
+                        <div id="g-signin2" data-onsuccess="onSignIn" style="margin-top: 20px;"></div>
                       </div>
                     </div>
                   </div>
@@ -267,6 +272,32 @@
       });
     });
   </script>
+  
+  <script>
+    function onSignIn(googleUser) {
+      var profile = googleUser.getBasicProfile();
+      console.log('Google User ID: ' + profile.getId());
+      // Here, you can handle the sign-in further, like sending info to your server
+    }
+
+    function renderButton() {
+      gapi.signin2.render('g-signin2', {
+        'scope': 'profile email',
+        'width': 240,
+        'height': 50,
+        'longtitle': true,
+        'theme': 'dark',
+        'onsuccess': onSignIn
+      });
+    }
+
+    gapi.load('auth2', function () {
+      gapi.auth2.init().then(function () {
+        renderButton();
+      });
+    });
+  </script>
+
 
 </body>
 </html>
