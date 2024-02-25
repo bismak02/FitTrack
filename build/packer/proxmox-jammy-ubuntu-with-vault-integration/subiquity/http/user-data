@@ -52,6 +52,7 @@ autoinstall:
     allow-pw: false
     install-server: true
     authorized-keys:
+      - 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHzC67/KPbOJkZkE4SxAyvsHPDdkV127NAEEEuH17am1 mpoblete@philedelphiaphilharmonic'
       - 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGTi1ciil8RrWQj1Vez1CLkaB4unBLUar/wPTg3wnI3Q palad@framework'
   late-commands:
     - sed -i 's/^#*\(send dhcp-client-identifier\).*$/\1 = hardware;/' /target/etc/dhcp/dhclient.conf
