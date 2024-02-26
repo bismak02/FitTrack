@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"> <!-- Added language attribute for better accessibility -->
+
 <head>
   <!-- Basic -->
   <meta charset="utf-8">
@@ -17,14 +18,12 @@
   <link rel="stylesheet" href="css/bootstrap.css"> <!-- Removed type attribute as it's not necessary in HTML5 -->
 
   <!-- Fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap"
+    rel="stylesheet">
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet">
   <!-- Responsive style -->
   <link href="css/responsive.css" rel="stylesheet">
-  <!-- Start: Google OAuth Script added by gueye-->
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
-  <!-- End: Google OAuth Script -->
 </head>
 
 <body>
@@ -37,10 +36,13 @@
             <img src="images/logo.png" alt="FitTrack logo"> <!-- Added alt text for better accessibility -->
             <span> FitTrack</span>
           </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <!-- Added missing button for toggler -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- Added missing button for toggler -->
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent"> <!-- Corrected structure for collapsible navbar -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Corrected structure for collapsible navbar -->
             <ul class="navbar-nav ml-auto"> <!-- Added ml-auto for alignment -->
               <li class="nav-item active">
                 <a class="nav-link" href="#homeSection">Home <span class="sr-only">(current)</span></a>
@@ -65,7 +67,8 @@
       <div class="container">
         <div class="custom_nav2">
           <nav class="navbar navbar-expand-lg custom_nav-container ">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
           </nav>
@@ -82,8 +85,6 @@
                       <h1>Reach Your Fitness Goals</h1>
                       <div class="btn-box">
                         <a href="sign.html" class="btn-2">Join Today</a>
-                        <!--Google Sign-In Button Placeholder Gueye -->
-                        <div id="g-signin2" data-onsuccess="onSignIn" style="margin-top: 20px;"></div>
                       </div>
                     </div>
                   </div>
@@ -108,9 +109,12 @@
           <img src="images/logo.png" alt="">
         </div>
         <div class="detail-box">
-          <h5>Our website is designed with one goal in mind: to empower you to take control of your physical health and dietary habits. </h5>
-          <h5>Whether you're a seasoned fitness enthusiast or just beginning your wellness journey, our interactive and user-friendly platform is here to support you every step of the way.</h5>
-          <h5>With Fitness and Nutrition Tracker, you can set personalized fitness goals, log various exercises, track your nutritional intake, and monitor your progress towards achieving your health objectives.</h5>
+          <h5>Our website is designed with one goal in mind: to empower you to take control of your physical health and
+            dietary habits. </h5>
+          <h5>Whether you're a seasoned fitness enthusiast or just beginning your wellness journey, our interactive and
+            user-friendly platform is here to support you every step of the way.</h5>
+          <h5>With Fitness and Nutrition Tracker, you can set personalized fitness goals, log various exercises, track
+            your nutritional intake, and monitor your progress towards achieving your health objectives.</h5>
         </div>
       </div>
     </div>
@@ -174,27 +178,26 @@
       <div class="layout_padding2-top">
         <div class="row">
           <div class="col-md-6 ">
-           <form action="https://formspree.io/f/meqygzyp" method="POST"
->
+            <form action="https://formspree.io/f/meqygzyp" method="POST">
               <div class="contact_form-container">
                 <div>
                   <div>
-                    <label for="fname">First name:</label> 
-										<input type="text" id="fname" name="fname"required><br><br>
-										<label for="lname">Last name:</label>
-										<input type="text" id="lname" name="lname"required><br><br>
-										<label for="email">Email:</label>
-										<input type="email" id="email" name="Email"required><br><br>
-										<label for="test">Message:</label>
-										<input type="text" id="text" name="Message"required><br><br>
-                  </div>          
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname" required><br><br>
+                    <label for="lname">Last name:</label>
+                    <input type="text" id="lname" name="lname" required><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="Email" required><br><br>
+                    <label for="test">Message:</label>
+                    <input type="text" id="text" name="Message" required><br><br>
+                  </div>
                   <div class="mt-5">
                     <button type="submit">Send</button>
                   </div>
                 </div>
               </div>
             </form>
-          </div>  
+          </div>
         </div>
       </div>
     </div>
@@ -212,7 +215,8 @@
         <div class="col-md-2 offset-md-1">
           <h6>Menus</h6>
           <ul>
-            <li class="active"><a class="nav-link" href="#homeSection">Home <span class="sr-only">(current)</span></a></li>
+            <li class="active"><a class="nav-link" href="#homeSection">Home <span class="sr-only">(current)</span></a>
+            </li>
             <li><a class="nav-link" href="#aboutSection">About</a> </li>
             <li><a class="nav-link" href="#contactSection">Contact Us</a></li>
             <li><a href="login.html"> Login</a></li>
@@ -251,53 +255,28 @@
 
   <include id="includedContent"></include>
   <script>
-    $(function(){
-      $("#includedContent").load("../htmlads.html"); 
+    $(function () {
+      $("#includedContent").load("../htmlads.html");
     });
   </script>
 
   <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
       // Smooth scrolling for anchor links
-      $("a").on('click', function(event) {
+      $("a").on('click', function (event) {
         if (this.hash !== "") {
           event.preventDefault();
           var hash = this.hash;
           $('html, body').animate({
             scrollTop: $(hash).offset().top
-          }, 800, function(){
+          }, 800, function () {
             window.location.hash = hash;
           });
         }
       });
     });
   </script>
-  
-  <script>
-    function onSignIn(googleUser) {
-      var profile = googleUser.getBasicProfile();
-      console.log('Google User ID: ' + profile.getId());
-      // Here, you can handle the sign-in further, like sending info to your server
-    }
-
-    function renderButton() {
-      gapi.signin2.render('g-signin2', {
-        'scope': 'profile email',
-        'width': 240,
-        'height': 50,
-        'longtitle': true,
-        'theme': 'dark',
-        'onsuccess': onSignIn
-      });
-    }
-
-    gapi.load('auth2', function () {
-      gapi.auth2.init().then(function () {
-        renderButton();
-      });
-    });
-  </script>
-
 
 </body>
+
 </html>
