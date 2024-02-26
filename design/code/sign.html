@@ -10,6 +10,8 @@
   <meta name="keywords" content="">
   <meta name="description" content="">
   <meta name="author" content="">
+  <!-- google script-->
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
 
   <title>FitTrack</title>
 
@@ -54,6 +56,14 @@
       <div class="container">
         <div class="heading_container">
           <h2>Sign Up for FitTrack</h2>
+        </div>
+        <!-- Google Sign-In Button Integration -->
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-center">
+            <div id="g-signin2" data-onsuccess="onSignIn"></div>
+            <!-- Optional Divider Text -->
+            <p class="my-4">or use your email for registration:</p>
+          </div>
         </div>
         <div class="row justify-content-center">
           <div class="col-md-6">
@@ -129,5 +139,30 @@
   <script data-cfasync="false" src="js/email-decode.min.js"></script>
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
+  <!-- Gueye intergrating Google client-->
+  <script>
+    // Function to render Google Sign-In button and handle the sign-in process
+    function onSignIn(googleUser) {
+      var profile = googleUser.getBasicProfile();
+      console.log('Google User ID: ' + profile.getId());
+      // Here, handle the user's sign-in information
+    }
+
+    // Load the auth2 library and initialize it with your Google Client ID
+    gapi.load('auth2', function () {
+      gapi.auth2.init({
+        client_id: '571637408007-ci740cdc7kiu0pujma417ijd9ae4k6vu.apps.googleusercontent.com', // Replace with your actual Client ID
+      }).then(function () {
+        gapi.signin2.render('g-signin2', {
+          'scope': 'profile email',
+          'width': 240,
+          'height': 50,
+          'longtitle': true,
+          'theme': 'dark',
+          'onsuccess': onSignIn
+        });
+      });
+    });
+  </script>
 </body>
 </html>
