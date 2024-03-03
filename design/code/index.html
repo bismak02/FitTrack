@@ -1,52 +1,35 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- Added language attribute for better accessibility -->
+<html lang="en">
 
 <head>
-  <!-- Basic -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- Site Metas -->
   <meta name="keywords" content="">
   <meta name="description" content="">
   <meta name="author" content="">
-  <!-- google script-->
   <script src="https://apis.google.com/js/platform.js" async defer></script>
-
-
   <title>FitTrack</title>
-
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="css/bootstrap.css"> <!-- Removed type attribute as it's not necessary in HTML5 -->
-
-  <!-- Fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap"
-    rel="stylesheet">
-  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
-  <!-- Responsive style -->
   <link href="css/responsive.css" rel="stylesheet">
 </head>
 
 <body>
   <div class="hero_area">
-    <!-- Header section starts -->
+	
+	  <!-- header section -->
     <header class="header_section">
       <div class="container">
         <nav class="navbar navbar-expand-lg custom_nav-container">
           <a class="navbar-brand" href="index.html">
-            <img src="images/logo.png" alt="FitTrack logo"> <!-- Added alt text for better accessibility -->
-            <span> FitTrack</span>
+            <img src="images/logo.png" alt="FitTrack logo">
+            <span>FitTrack</span>
           </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <!-- Added missing button for toggler -->
-            <span class="navbar-toggler-icon"></span>
-          </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Corrected structure for collapsible navbar -->
-            <ul class="navbar-nav ml-auto"> <!-- Added ml-auto for alignment -->
+            <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
                 <a class="nav-link" href="#homeSection">Home <span class="sr-only">(current)</span></a>
               </li>
@@ -57,40 +40,24 @@
                 <a class="nav-link" href="#contactSection">Contact Us</a>
               </li>
               <li class="nav-item">
-                <!-- Google Sign-In button placeholder -->
                 <div id="g-signin2" data-onsuccess="onSignIn"></div>
               </li>
             </ul>
           </div>
-
-    </header>
-    <!-- end header section -->
-    <!-- slider section -->
-    <section id="homeSection" class="slider_section position-relative">
-      <div class="container">
-        <div class="custom_nav2">
-          <nav class="navbar navbar-expand-lg custom_nav-container ">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </nav>
-        </div>
+        </nav>
       </div>
+    </header>
+		
+  <!-- home section -->
+    <section id="homeSection" class="slider_section position-relative">
       <div class="slider_container">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-6 col-md-7 offset-md-6 offset-md-5">
-                    <div class="detail-box">
-                      <h1>Reach Your Fitness Goals</h1>
-                      <div class="btn-box">
-                        <a href="sign.html" class="btn-2">Join Today</a>
-                      </div>
-                    </div>
-                  </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-7 offset-md-6 offset-md-5">
+              <div class="detail-box">
+                <h1>Reach Your Fitness Goals</h1>
+                <div class="btn-box">
+                  <a href="sign.html" class="btn-2">Join Today</a>
                 </div>
               </div>
             </div>
@@ -98,10 +65,9 @@
         </div>
       </div>
     </section>
-    <!-- end slider section -->
   </div>
-
-  <!-- about section -->
+	
+  <!-- about us section -->
   <section id="aboutSection" class="about_section layout_padding">
     <div class="container">
       <div class="heading_container">
@@ -109,23 +75,17 @@
       </div>
       <div class="box">
         <div class="img-box">
-          <img src="images/logo.png" alt="">
+          <img src="images/logo.png" alt="FitTrack logo">
         </div>
         <div class="detail-box">
-          <h5>Our website is designed with one goal in mind: to empower you to take control of your physical health and
-            dietary habits. </h5>
-          <h5>Whether you're a seasoned fitness enthusiast or just beginning your wellness journey, our interactive and
-            user-friendly platform is here to support you every step of the way.</h5>
-          <h5>With Fitness and Nutrition Tracker, you can set personalized fitness goals, log various exercises, track
-            your nutritional intake, and monitor your progress towards achieving your health objectives.</h5>
+          <h5>Our website is designed with one goal in mind: to empower you to take control of your physical health and dietary habits. Whether you're a seasoned fitness enthusiast or just beginning your wellness journey, our interactive and user-friendly platform is here to support you every step of the way. With Fitness and Nutrition Tracker, you can set personalized fitness goals, log various exercises, track your nutritional intake, and monitor your progress towards achieving your health objectives.</h5>
         </div>
       </div>
     </div>
   </section>
-  <!-- end about section -->
-
-  <!-- Us section -->
-  <section class="us_section layout_padding">
+	
+  <!-- features section -->
+   <section class="us_section layout_padding">
     <div class="container">
       <div class="heading_container">
         <h2>Why Choose Us</h2>
@@ -133,7 +93,7 @@
       <div class="us_container">
         <div class="box">
           <div class="img-box">
-            <img src="images/u-1.png" alt="">
+            <img src="images/u-1.png" alt="Exercise icon">
           </div>
           <div class="detail-box">
             <h5>Exercise</h5>
@@ -142,11 +102,11 @@
         </div>
         <div class="box">
           <div class="img-box">
-            <img src="images/u-2.png" alt="">
+            <img src="images/u-2.png" alt="Nutrition icon">
           </div>
           <div class="detail-box">
             <h5>Nutrition</h5>
-            <p>Track your food to form healthy eating habits</p>
+            <p>Track your food to form healthy eating habits.</p>
           </div>
         </div>
         <div class="box">
@@ -170,34 +130,27 @@
       </div>
     </div>
   </section>
-  <!-- end us section -->
-
+	
   <!-- contact section -->
   <section id="contactSection" class="contact_section layout_padding">
     <div class="container">
       <div class="heading_container">
-        <h2><span>Get In Touch</span></h2>
+        <h2>Get In Touch</h2>
       </div>
       <div class="layout_padding2-top">
         <div class="row">
-          <div class="col-md-6 ">
+          <div class="col-md-6">
             <form action="https://formspree.io/f/meqygzyp" method="POST">
               <div class="contact_form-container">
-                <div>
-                  <div>
-                    <label for="fname">First name:</label>
-                    <input type="text" id="fname" name="fname" required><br><br>
-                    <label for="lname">Last name:</label>
-                    <input type="text" id="lname" name="lname" required><br><br>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="Email" required><br><br>
-                    <label for="test">Message:</label>
-                    <input type="text" id="text" name="Message" required><br><br>
-                  </div>
-                  <div class="mt-5">
-                    <button type="submit">Send</button>
-                  </div>
-                </div>
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname" required><br><br>
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname" required><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="Email" required><br><br>
+                <label for="text">Message:</label>
+                <input type="text" id="text" name="Message" required><br><br>
+                <button type="submit">Send</button>
               </div>
             </form>
           </div>
@@ -205,7 +158,6 @@
       </div>
     </div>
   </section>
-  <!-- end contact section -->
 
   <!-- info section -->
   <section class="info_section layout_padding2-top">
@@ -218,11 +170,10 @@
         <div class="col-md-2 offset-md-1">
           <h6>Menus</h6>
           <ul>
-            <li class="active"><a class="nav-link" href="#homeSection">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li><a class="nav-link" href="#aboutSection">About</a> </li>
+            <li><a class="nav-link" href="#homeSection">Home </a></li>
+            <li><a class="nav-link" href="#aboutSection">About</a></li>
             <li><a class="nav-link" href="#contactSection">Contact Us</a></li>
-            <li><a href="login.html"> Login</a></li>
+					  <li><a href="login.html">Login</a></li>
           </ul>
         </div>
         <div class="col-md-3">
@@ -245,9 +196,13 @@
   </section>
   <!-- footer section -->
 
-  <script data-cfasync="false" src="js/email-decode.min.js"></script>
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script>
+    $(function () {
+      // This code will load external HTML content which was previously done with the non-standard <include> tag
+      $("#includedContent").load("htmlads.html");
+    });
+  </script>
 
   <script>
     function openNav() {
