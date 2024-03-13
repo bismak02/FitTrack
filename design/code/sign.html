@@ -1,27 +1,19 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- Added language attribute for better accessibility -->
+<html lang="en">
+
 <head>
-  <!-- Basic -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- Site Metas -->
   <meta name="keywords" content="">
   <meta name="description" content="">
   <meta name="author" content="">
-
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
   <title>FitTrack</title>
-
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="css/bootstrap.css"> <!-- Removed type attribute as it's not necessary in HTML5 -->
-
-  <!-- Fonts style -->
+  <link rel="stylesheet" href="css/bootstrap.css">
   <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet">
-  <!-- Custom styles for this template -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
-  <!-- Responsive style -->
-  <link href="css/responsive.css" rel="stylesheet">
 </head>
 
 <body>
@@ -55,6 +47,18 @@
         <div class="heading_container">
           <h2>Sign Up for FitTrack</h2>
         </div>
+        <!-- Google Sign-In Button Integration -->
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-center">
+            <div id="gSignInWrapper">
+              <div id="customBtn" class="customGPlusSignIn">
+                <span class="icon"></span>
+                <span class="buttonText">Google</span>
+              </div>
+            </div>
+            <p class="my-4">or use your email for registration:</p>
+          </div>
+        </div>
         <div class="row justify-content-center">
           <div class="col-md-6">
             <form action="signup_process.php" method="POST">
@@ -85,7 +89,9 @@
       </div>
     </section>
     <!-- End Sign Up Form Section -->
-    
+
+
+
     <!-- info section -->
     <section class="info_section layout_padding2-top">
       <div class="container">
@@ -99,9 +105,6 @@
             <ul>
               <li class="active">
                 <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li>
-                <a href="login.html">Login</a>
               </li>
             </ul>
           </div>
@@ -128,6 +131,33 @@
 
   <script data-cfasync="false" src="js/email-decode.min.js"></script>
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
+
+
+  <!-- Gueye intergrating Google client-->
+ <!-- <script>
+    // Function to render Google Sign-In button and handle the sign-in process
+    function onSignIn(googleUser) {
+      var profile = googleUser.getBasicProfile();
+      console.log('Google User ID: ' + profile.getId());
+      // Here, handle the user's sign-in information
+    }
+
+    // Load the auth2 library and initialize it with your Google Client ID
+    gapi.load('auth2', function () {
+      gapi.auth2.init({
+        client_id: '571637408007-ci740cdc7kiu0pujma417ijd9ae4k6vu.apps.googleusercontent.com', // Replace with your actual Client ID
+      }).then(function () {
+        gapi.signin2.render('g-signin2', {
+          'scope': 'profile email',
+          'width': 240,
+          'height': 50,
+          'longtitle': true,
+          'theme': 'dark',
+          'onsuccess': onSignIn
+        });
+      });
+    });
+  </script>-->
+
 </body>
 </html>
