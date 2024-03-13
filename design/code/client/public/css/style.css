@@ -1,0 +1,603 @@
+/* General body styles, sets the default font and colors for the website */
+body {
+  font-family: "Roboto", sans-serif;
+  color: #040000;
+  background-color: #ffffff;
+}
+
+/* Applies Montserrat font to all header tags and specific classes for a distinctive, stylish look */
+h1, h2, h3, h4, h5, h6, .btn, .navbar-brand span, .info_section h6, .footer_section p, .footer_section a {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Ensures consistent font styling for paragraph, link, list, input, button, and nav link elements */
+p, a, li, input, button, .navbar-nav .nav-link {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Makes headers and buttons bold for emphasis */
+h1, h2, h3, h4, h5, h6, .btn {
+  font-weight: 700; 
+}
+
+/* Sets regular font weight for text content, links, list items, inputs, buttons, and nav links */
+p, a, li, input, button, .navbar-nav .nav-link {
+  font-weight: 400; 
+}
+
+/* Adds uniform padding to sections for consistent spacing */
+.layout_padding, .layout_padding-top, .layout_padding-bottom {
+  padding: 90px 0;
+}
+
+/* Provides a smaller padding option for different sections */
+.layout_padding2, .layout_padding2-top, .layout_padding2-bottom, .info_section.layout_padding2-top {
+  padding: 45px 0;
+}
+
+/* Centers heading container and applies bottom margin for spacing */
+.heading_container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+/* Styles for heading container h2 elements, including a decorative underline */
+.heading_container h2 {
+  font-weight: bold;
+  display: flex;
+  position: relative;
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+/* Underline effect for h2 elements within heading containers */
+.heading_container h2::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 60px;
+  height: 7px;
+  border-radius: 10px;
+  background-color: #123A6D;
+  transform: translateX(-50%);
+}
+
+/* Hero area background styling, with gradient and background image */
+.hero_area {
+  height: 100vh;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right bottom;
+}
+
+/* Adjusts hero area height on sub pages */
+.sub_page .hero_area {
+  height: auto;
+}
+
+/* Slider section background adjustments for sub pages */
+.sub_page .slider_section {
+  background: none;
+}
+
+/* Specific background color for about page slider section */
+.sub_page.about_page .slider_section {
+  background-color: #f8f8f8;
+}
+
+/* Header section styles, including background color and fixed positioning */
+.header_section {
+  background-color: #161616;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+}
+
+/* Navbar brand logo styling */
+.navbar-brand img {
+  width: 35px;
+  margin-right: 5px;
+}
+
+/* Font styling for navbar brand, contact nav links, and custom nav links */
+.navbar-brand span, .custom_nav-container .contact_nav .nav-item .nav-link, .custom_nav2 .navbar-expand-lg .navbar-nav .nav-item .nav-link {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* Button styling, including background color, border, and hover effects */
+.btn, .btn:focus, .slider_section .detail-box .btn-box a, .about_section .box .detail-box a {
+  outline: none !important;
+  box-shadow: none;
+  text-decoration: none;
+  color: #ffffff; 
+  background-color: #123A6D; 
+  border: 1px solid #123A6D; 
+}
+
+/* Hover effects for links, changing color and background */
+a:hover, a:focus {
+  color: #123A6D; 
+  background-color: transparent; 
+}
+
+/* Specific background for hero_area */
+.hero_area {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url('../images/hero-bg.jpg');
+}
+
+.slider_section {
+  height: 100vh;
+  background-image: url(../images/slider-bg.jpg);
+  background-size: cover;
+}
+
+.navbar-nav .nav-link, .navbar-brand span, .custom_nav-container .contact_nav .nav-item .nav-link, .custom_nav2 .navbar-expand-lg .navbar-nav .nav-item .nav-link {
+  color: #ffffff; 
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+.navbar-nav .nav-link:hover, .navbar-brand span:hover, .custom_nav-container .contact_nav .nav-item .nav-link:hover, .custom_nav2 .navbar-expand-lg .navbar-nav .nav-item .nav-link:hover {
+  background-color: #123A6D; 
+  color: #ffffff; 
+}
+.slider_section .slider_container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.slider_section #carouselExampleIndicators {
+  width: 100%;
+}
+
+.slider_section .detail-box h2 {
+  color: #123A6D;
+}
+
+.slider_section .detail-box h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #f4f3f3;
+  text-transform: uppercase;
+}
+
+.slider_section .detail-box p {
+  color: #ffffff;
+}
+
+.slider_section .detail-box .btn-box {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 35px -5px 0 -5px;
+}
+
+.slider_section .detail-box .btn-box a {
+  width: 165px;
+  text-align: center;
+  margin: 5px;
+}
+
+.slider_section .detail-box .btn-box .btn-1 {
+  display: inline-block;
+  padding: 7px 0;
+  background-color: #123A6D;
+  border: 1px solid #123A6D;
+  color: #ffffff;
+}
+
+.slider_section .detail-box .btn-box .btn-1:hover {
+  background-color: transparent;
+  color: #123A6D;
+}
+
+.slider_section .detail-box .btn-box .btn-2 {
+  display: inline-block;
+  padding: 7px 0;
+  background-color: #f4f3f3;
+  border: 1px solid #f4f3f3;
+  color: #020000;
+}
+
+.slider_section .detail-box .btn-box .btn-2:hover {
+  background-color: transparent;
+  color: #f4f3f3;
+}
+
+.slider_section .carousel-indicators {
+  bottom: 50%;
+  margin: 0;
+  transform: translateY(50%);
+  align-items: center;
+  justify-content: flex-start;
+  left: 25px;
+}
+
+.slider_section .carousel-indicators li {
+  width: 14px;
+  height: 14px;
+  opacity: 1;
+  background-color: transparent;
+  border: 2px solid #123A6D;
+  border-radius: 100%;
+}
+
+.slider_section .carousel-indicators li.active {
+  width: 18px;
+  height: 18px;
+  border: 3px solid #123A6D;
+}
+
+.slider_section .number_box {
+  width: 50px;
+  position: absolute;
+  left: 25px;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #123A6D;
+  transform: translateY(-50%);
+}
+
+.slider_section .number_box hr {
+  border: none;
+  width: 1px;
+  height: 200px;
+  background-color: #123A6D;
+  margin: 2rem 0;
+}
+
+.about_section {
+  background-color: #f8f8f8;
+}
+
+.about_section .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.about_section .box .img-box img {
+  max-width: 100%;
+}
+
+.about_section .box .detail-box {
+  margin-top: 25px;
+}
+
+.about_section .box .detail-box a {
+  display: inline-block;
+  padding: 10px 40px;
+  background-color: #151615;
+  border: 1px solid #151615;
+  color: #ffffff;
+  margin-top: 15px;
+}
+
+.about_section .box .detail-box a:hover {
+  background-color: transparent;
+  color: #151615;
+}
+
+.us_section {
+  background-color: #123A6D;
+  color: #ffffff;
+}
+
+.us_section .us_container {
+  display: flex;
+}
+
+.us_section .us_container .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 25px 10px 0 10px;
+}
+
+.us_section .us_container .box .img-box {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.us_section .us_container .box .img-box img {
+  max-width: 100%;
+}
+
+.us_section .us_container .box .detail-box h5 {
+  font-weight: bold;
+}
+.us_section .us_container .box .img-box img {
+  width: 80px;
+}
+
+.contact_section {
+  position: relative;
+}
+
+.contact_section .bg-img {
+  position: absolute;
+  width: 100px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.contact_section .bg-img img {
+  width: 100%;
+}
+
+.contact_section .heading_container {
+  justify-content: center;
+}
+
+.contact_section .heading_container h2 {
+  text-transform: unset;
+}
+
+.contact_section input::-webkit-input-placeholder {
+  color: #000;
+}
+
+.contact_section input:-ms-input-placeholder {
+  color: #000;
+}
+
+.contact_section input::-ms-input-placeholder {
+  color: #000;
+}
+
+.contact_section input::placeholder {
+  color: #000;
+}
+
+.contact_section input {
+  border: none;
+  outline: none;
+  border-bottom: 0.8px solid #ac9784;
+  width: 90%;
+  margin: 10px 0;
+}
+
+.contact_section input::-webkit-input-placeholder {
+  color: #123A6D;
+}
+
+
+.contact_section input:-ms-input-placeholder {
+  color:  #123A6D;
+}
+
+.contact_section input::-ms-input-placeholder {
+  color: #123A6D;
+}
+
+.contact_section input::placeholder {
+  color:  #123A6D;
+}
+
+.contact_form-container {
+  padding: 15px 0 15px 0;
+}
+
+.contact_form-container button {
+  border: none;
+  background-color: #123A6D;
+  color: #fff;
+  padding: 14px 55px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.info_section {
+  background-color: #161616;
+  color: #ffffff;
+}
+
+.info_section h6 {
+  font-weight: bold;
+}
+
+.info_section .info_form {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 45px;
+}
+
+.info_section .info_form h4 {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.info_section .info_form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.info_section .info_form form input {
+  background-color: #ffffff;
+  border: none;
+  width: calc(100% - 139px);
+  outline: none;
+  color: #000000;
+  height: 42.4px;
+  padding-left: 15px;
+}
+
+.info_section .info_form form input ::-webkit-input-placeholder {
+  color: #ffffff;
+  opacity: 0.2;
+}
+
+.info_section .info_form form input :-ms-input-placeholder {
+  color: #ffffff;
+  opacity: 0.2;
+}
+
+.info_section .info_form form input ::-ms-input-placeholder {
+  color: #ffffff;
+  opacity: 0.2;
+}
+
+.info_section .info_form form input ::placeholder {
+  color: #ffffff;
+  opacity: 0.2;
+}
+
+.info_section .info_form form button {
+  background-color: #123A6D;
+  display: inline-block;
+  padding: 9px 30px;
+  background-color: #123A6D;
+  border: 1px solid #123A6D;
+  color: #000000;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.info_section .info_form form button:hover {
+  background-color: transparent;
+  color: #123A6D;
+}
+
+.info_section h6 {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.info_section p {
+  color: #cbc9c9;
+}
+
+.info_section ul {
+  padding: 0;
+}
+
+.info_section ul li {
+  list-style-type: none;
+  margin: 3px 0;
+}
+
+.info_section ul li a {
+  color: #cbc9c9;
+}
+
+.info_section ul li a:hover {
+  color: #ffffff;
+}
+
+.info_section .info_link-box a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 15px 0;
+}
+
+.info_section .info_link-box a:hover {
+  color: #ffffff;
+}
+
+.info_section .info_link-box a img {
+  margin-right: 15px;
+}
+
+.info_section .info_link-box a span {
+  color: #cbc9c9;
+}
+
+.info_section .info_link-box a:hover span {
+  color: #ffffff;
+}
+
+.info_section .info_social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 45px auto 15px auto;
+}
+
+.info_section .info_social img {
+  width: 35px;
+  margin-right: 8px;
+}
+
+.layout_padding {
+  padding-top: 100px;
+}
+
+.footer_section {
+  background-color: #161616;
+  padding: 20px 0;
+}
+
+.footer_section p {
+  margin: 0;
+  text-align: center;
+  color: #ffffff;
+}
+
+.footer_section a {
+  color: #ffffff;
+}
+
+
+.runimage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%; 
+  height: auto;
+}
+
+
+.App-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #282c34;
+  color: white;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin-right: 10px;
+}
+
+/* Hide/show elements */
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
