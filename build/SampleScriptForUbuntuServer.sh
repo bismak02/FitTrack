@@ -1,15 +1,29 @@
 # Sample script for ubuntu server
 
+# Define a path to generate a log file
+LOGFILE="/home/ubuntu/installation_log.log"
+
+# Redirect output to the logfile
+exec &> "$LOGFILE"
+
 # these are commands for debugging
 # set -e will exit if a command exits with a non zero status, like an error
 # set -v will print commands as they are executed in the script which should help debugging
 set -e
 set -v
 
-sudo apt-get update
-sudo apt install nginx
+
 sudo apt update
 sudo apt install git -y
+
+sudo apt-get update
+sudo apt install nginx
+
+# Enable and start Nginx service
+sudo systemctl enable nginx
+sudo systemctl start nginx
+
+
 
 cd ~
 
