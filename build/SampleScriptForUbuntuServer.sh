@@ -17,7 +17,7 @@ sudo apt update
 sudo apt install git -y
 
 sudo apt-get update
-sudo apt install nginx
+sudo apt install nginx -y
 
 # Enable and start Nginx service
 sudo systemctl enable nginx
