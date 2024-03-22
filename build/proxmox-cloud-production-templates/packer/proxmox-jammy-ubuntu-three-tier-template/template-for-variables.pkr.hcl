@@ -5,23 +5,23 @@
 
 # This is the name of the node in the Cloud Cluster where to deploy the virtual instances
 locals {
-  NODENAME = vault("/secret/data/team00-NODENAME","NODENAME3")
+  NODENAME = vault("/secret/data/team01o-NODENAME","NODENAME3")
 }
 
 locals {
-  USERNAME = vault("/secret/data/team00-username-packer-system","USERNAME")
+  USERNAME = vault("/secret/data/team01o-username-packer-system","USERNAME")
 }
 
 locals {
-  PROXMOX_TOKEN = vault("/secret/data/team00-token-packer-system","TOKEN")
+  PROXMOX_TOKEN = vault("/secret/data/team01o-token-packer-system","TOKEN")
 }
 
 locals {
-  URL = vault("/secret/data/team00-url","SYSTEM41")
+  URL = vault("/secret/data/team01o-url","SYSTEM41")
 }
 
 locals {
-  SSHPW = vault("/secret/data/team00-ssh","SSHPASS")
+  SSHPW = vault("/secret/data/team01o-ssh","SSHPASS")
 }
 
 variable "MEMORY" {
@@ -51,19 +51,19 @@ variable "NUMBEROFCORES" {
 # This is the name of the Virtual Machine Template you want to create
 variable "frontend-VMNAME" {
   type    = string
-  default = ""
+  default = "team01o-fe-template"
 }
 
 # This is the name of the Virtual Machine Template you want to create
 variable "backend-VMNAME" {
   type    = string
-  default = ""
+  default = "team01o-be-template"
 }
 
 # This is the name of the Virtual Machine Template you want to create
 variable "loadbalancer-VMNAME" {
   type    = string
-  default = ""
+  default = "team01o-lb-template"
 }
 
 variable "iso_checksum" {
