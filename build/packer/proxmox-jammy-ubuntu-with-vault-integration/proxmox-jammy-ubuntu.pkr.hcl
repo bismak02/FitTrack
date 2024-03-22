@@ -177,4 +177,17 @@ build {
   # This block you can add your own shell scripts to customize the image you are creating
   ########################################################################################################################
 
+  # Going to grab the config file from the buildserver in the .ssh folder and put it in the instances .ssh folder
+  # This works due to both configs being the same as all it is doing is allowing the cloning of the group repo
+  provisioner "file" {
+    source      = "../../../../.ssh/config"
+    destination = "/home/vagrant/.ssh/"
+  }
+
+# This will grab the key used for cloning from github in the buildserver and place it in the instances .ssh folder
+# This key is authorized so it will allow the instances to clone the repo
+  provisioner "file" {
+    source      = "../../../../.ssh/id_ed25519_340_buildserver_github_key"
+    destination = "/home/vagrant/.ssh/"
+  }
 }
