@@ -7,4 +7,4 @@ Host github.com
   Hostname github.com
   # This command tells SSH which Private key to use when making an SSH 
   # connection to GitHub
-  IdentityFile ~/.ssh/id_ed25519_340_buildserver_github_key
+  IdentityFile ~/.ssh/id_ed25519
