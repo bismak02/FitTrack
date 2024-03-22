@@ -9,5 +9,6 @@
 # by default -- you should change this to match the port your application is being served on
 
 sudo firewall-cmd --zone=meta-network --add-port=3000/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=80/tcp --permanent
 
 sudo firewall-cmd --reload
