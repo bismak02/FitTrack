@@ -9,6 +9,6 @@
 sudo cp -v /home/vagrant/team01o-2024/build/proxmox-cloud-production-templates/code/nginx/nginx.conf /etc/nginx/
 sudo cp -v /home/vagrant/team01o-2024/build/proxmox-cloud-production-templates/code/nginx/default /etc/nginx/sites-available/
 # This connects the TLS certs built in this script with the instances
-sudo cp -v /home/team01o-2024/build/proxmox-cloud-production-templates/code/nginx/self-signed.conf /etc/nginx/snippets/
+sudo cp -v /home/vagrant/team01o-2024/build/proxmox-cloud-production-templates/code/nginx/self-signed.conf /etc/nginx/snippets/
 
 sudo systemctl daemon-reload
