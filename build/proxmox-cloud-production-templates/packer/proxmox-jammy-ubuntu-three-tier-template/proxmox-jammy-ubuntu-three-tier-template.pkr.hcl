@@ -203,7 +203,7 @@ build {
 
   provisioner "file" {
     source      = "./config"
-    destination = "/home/vagrant/.ssh/"
+    destination = "/home/vagrant/.ssh/config"
   }
 
   #############################################################################
@@ -214,7 +214,7 @@ build {
 
   provisioner "file" {
     source      = "./id_ed25519-three-tier-github-key"
-    destination = "/home/vagrant/.ssh/"
+    destination = "/home/vagrant/.ssh/id_ed25519-three-tier-github-key"
   }
 
   #############################################################################
