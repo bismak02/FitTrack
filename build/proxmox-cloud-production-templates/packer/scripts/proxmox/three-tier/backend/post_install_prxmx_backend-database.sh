@@ -17,7 +17,7 @@ sudo apt-get install -y mariadb-server-10.6
 #############################################################################
 
 # Change directory to the location of your JS code
-cd /home/vagrant/team-01o-2024/build/proxmox-cloud-production-templates/code/db-samples
+cd /home/vagrant/team01o-2024/build/proxmox-cloud-production-templates/code/db-samples
 
 # Inline MySQL code that uses the secrets passed via the ENVIRONMENT VARIABLES to create a non-root user
 # IPRANGE is "10.110.%.%"
