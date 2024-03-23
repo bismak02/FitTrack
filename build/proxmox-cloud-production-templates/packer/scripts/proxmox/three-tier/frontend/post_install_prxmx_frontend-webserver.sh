@@ -37,7 +37,7 @@ sudo -u vagrant pm2 save
 # this is a hack to pass environment variables into the vm instances
 ###############################################################################
 
-sudo sed -i "s/FQDN=/FQDN=$FQDN/" /home/vagrant/team-01o-2024/build/proxmox-cloud-production-templates/code/express-static-app/.env
-sudo sed -i "s/DBUSER=/DBUSER=$DBUSER/" /home/vagrant/team-01o-2024/build/proxmox-cloud-production-templates/code/express-static-app/.env
-sudo sed -i "s/DBPASS=/DBPASS=$DBPASS/" /home/vagrant/team-01o-2024/build/proxmox-cloud-production-templates/code/express-static-app/.env
-sudo sed -i "s/DATABASE=/DATABASE=$DATABASE/" /home/vagrant/team-01o-2024/build/proxmox-cloud-production-templates/code/express-static-app/.env
+sudo sed -i "s/FQDN=/FQDN=$FQDN/" /home/vagrant/team01o-2024/build/proxmox-cloud-production-templates/code/express-static-app/.env
+sudo sed -i "s/DBUSER=/DBUSER=$DBUSER/" /home/vagrant/team01o-2024/build/proxmox-cloud-production-templates/code/express-static-app/.env
+sudo sed -i "s/DBPASS=/DBPASS=$DBPASS/" /home/vagrant/team01o-2024/build/proxmox-cloud-production-templates/code/express-static-app/.env
+sudo sed -i "s/DATABASE=/DATABASE=$DATABASE/" /home/vagrant/team01o-2024/build/proxmox-cloud-production-templates/code/express-static-app/.env
