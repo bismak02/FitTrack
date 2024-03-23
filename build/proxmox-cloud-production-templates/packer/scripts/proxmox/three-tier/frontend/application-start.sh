@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /home/vagrant/team-01o-2024/build/proxmox-cloud-production-templates/code/express-static-app/
+cd /home/vagrant/team01o-2024/build/proxmox-cloud-production-templates/code/express-static-app/
 
 # run the npm install command to retrieve required express dependencies
 # this will retrieve all the NPM packages listed in the package.json file
