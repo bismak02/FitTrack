@@ -13,7 +13,7 @@ sudo apt-get install -y nodejs
 sudo npm install -g npm@9.6.0
 
 # Change directory to the location of your JS code
-cd /home/vagrant/team-01o-2024/build/proxmox-cloud-production-templates/code/express-static-app/
+cd /home/vagrant/team01o-2024/build/proxmox-cloud-production-templates/code/express-static-app/
 
 # Use NPM package manager to install needed dependecies to run our EJS app
 # https://github.com/motdotla/dotenv -- create a .env file to pass environment variables
