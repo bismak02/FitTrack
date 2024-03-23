@@ -8,3 +8,4 @@ Host github.com
   # This command tells SSH which Private key to use when making an SSH 
   # connection to GitHub
   IdentityFile /home/vagrant/.ssh/id_ed25519-three-tier-github-key
+  StrictHostKeyChecking no
