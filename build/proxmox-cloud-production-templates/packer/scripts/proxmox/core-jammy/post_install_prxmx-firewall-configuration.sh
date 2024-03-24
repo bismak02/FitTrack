@@ -11,10 +11,7 @@ sudo apt-get update
 sudo apt-get install -y firewalld
 
 sudo systemctl enable firewalld
-sudo systemctl start 
-
-# disable default Ubuntu firewall
-sudo ufw disable
+sudo systemctl start firewalld
 ##############################################################################################
 # sudo firewall-cmd --zone=public --add-interface=ens18 --permanent
 # Creates a zone that restricts traffic to that one interface ens18
@@ -50,8 +47,9 @@ sudo firewall-cmd --zone=meta-network --add-port=9100/tcp --permanent
 # sudo firewall-cmd --zone=public --add-port=####/udp --permanent
 ##############################################################################################
 
-sudo firewall-cmd --zone=public --add-port=80/tcp --permanent
-sudo firewall-cmd --zone=public --add-port=3000/tcp --permanent
+
 
 sudo firewall-cmd --reload
+sudo firewall-cmd --reload
+
 sudo firewall-cmd --reload
