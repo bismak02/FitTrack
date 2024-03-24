@@ -1,54 +1,29 @@
-import logo from './logo.svg';
-import { useEffect, useState } from 'react';
-import { jwtDecode } from "jwt-decode";
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { Box } from '@mui/material';
+
 import './App.css';
+import ExerciseDetail from './pages/ExerciseDetail';
+import Home from './pages/Home';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import ExercisePage from './pages/Exercisepage';
+import LoginPage from './pages/LoginPage';
+import CalcPage from './pages/CalcPage'; 
 
-function App() {
-  const [user, setUser] = useState({});
-
-  function handleCallbackResponse(response) {
-    console.log("Encoded JWT ID token: " + response.credential);
-    var userObject = jwtDecode(response.credential);
-    console.log(userObject);
-  
-    // Check if the email ends with @hawk.iit.edu
-    if (userObject.email.endsWith("@hawk.iit.edu")) {
-      setUser(userObject);
-      document.getElementById("signInDiv").hidden = true;
-      window.location.href = 'dashboard.html'; 
-    } else {
-      alert("Only users from the organization (with @hawk.iit.edu emails) can log in.");
-    }
-  }
-  function handleSignOut(event) {
-    setUser({});
-    document.getElementById("signInDiv").hidden = false;
-  }
-  
-  useEffect(() => {
-    window.__ReactApp = {
-      handleSignOut
-    };
-
-    /* global google */
-    google.accounts.id.initialize({
-      client_id: "571637408007-ci740cdc7kiu0pujma417ijd9ae4k6vu.apps.googleusercontent.com",
-      callback: handleCallbackResponse
+const App = () => (
+  <Box width="400px" sx={{ width: { xl: '1488px' } }} m="auto">
+    <Navbar />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/exercise/:id" element={<ExerciseDetail />} />
+      <Route path="/exercise" element={<ExercisePage />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/calc" element={<CalcPage />} />
       
-    });
-
-    google.accounts.id.renderButton(
-      document.getElementById("signInDiv"), 
-      { theme: "outline", size: "large" }
-    );
-    google.accounts.id.prompt();
-  }, []); 
-
-  return (
-    <div className="App">
-      <div id="signInDiv"></div>
-    </div>
-  );
-}
+    </Routes>
+    <Footer />
+  </Box>
+);
 
 export default App;
