@@ -12,43 +12,58 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
 
   useEffect(() => {
     const fetchExercisesData = async () => {
-      let exercisesData = [];
+      try {
+        let exercisesData = [];
 
-      if (bodyPart === 'all') {
-        exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
-      } else {
-        exercisesData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`, exerciseOptions);
+        if (bodyPart === 'all') {
+          exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
+        } else {
+          exercisesData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`, exerciseOptions);
+        }
+
+        console.log('Fetched Exercises Data:', exercisesData); // Debugging line
+        setExercises(Array.isArray(exercisesData) ? exercisesData : []);
+      } catch (error) {
+        console.error('Error fetching exercises data:', error);
       }
-
-      setExercises(exercisesData);
     };
 
     fetchExercisesData();
-  }, [bodyPart]);
+  }, [bodyPart, setExercises]);
 
-  // Pagination
-  const indexOfLastExercise = currentPage * exercisesPerPage;
-  const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
-  const currentExercises = exercises.slice(indexOfFirstExercise, indexOfLastExercise);
+  // Debugging line to check the state after setting it
+  useEffect(() => {
+    console.log('Current Exercises State:', exercises);
+  }, [exercises]);
+
+  // Check if exercises is an array and use slice for pagination
+  const currentExercises = Array.isArray(exercises)
+    ? exercises.slice((currentPage - 1) * exercisesPerPage, currentPage * exercisesPerPage)
+    : [];
 
   const paginate = (event, value) => {
     setCurrentPage(value);
-
     window.scrollTo({ top: 1800, behavior: 'smooth' });
   };
 
-  if (!currentExercises.length) return <Loader />;
+  if (!currentExercises.length) {
+    console.log('No exercises to display.');
+    return <Loader />;
+  }
 
   return (
-    <Box id="exercises" sx={{ mt: { lg: '109px' } }} mt="50px" p="20px">
-      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">Showing Results</Typography>
+    <Box id="exercises" sx={{ mt: { lg: '109px' }, p: '20px' }}>
+      <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
+        Showing Results
+      </Typography>
       <Stack direction="row" sx={{ gap: { lg: '107px', xs: '50px' } }} flexWrap="wrap" justifyContent="center">
         {currentExercises.map((exercise, idx) => (
-          <ExerciseCard key={idx} exercise={exercise} />
+          // Prefer using a unique identifier for the key if possible
+          <ExerciseCard key={exercise.id || idx} exercise={exercise} />
         ))}
       </Stack>
-      <Stack sx={{ mt: { lg: '114px', xs: '70px' } }} alignItems="center">
-        {exercises.length > 9 && (
+      {exercises.length > 9 && (
+        <Stack sx={{ mt: { lg: '114px', xs: '70px' } }} alignItems="center">
           <Pagination
             color="standard"
             shape="rounded"
@@ -58,11 +73,10 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
             onChange={paginate}
             size="large"
           />
-        )}
-      </Stack>
+        </Stack>
+      )}
     </Box>
   );
 };
 
 export default Exercises;
-

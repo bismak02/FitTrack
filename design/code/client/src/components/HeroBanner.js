@@ -1,5 +1,6 @@
-import React from 'react';
-import { Box, TextField, Button, Grid,Typography } from '@mui/material';
+import React, { useState } from 'react';
+import { Box, TextField, Button, Grid, Typography } from '@mui/material';
+import { useForm, ValidationError } from '@formspree/react';
 
 import HeroBannerImage from '../assets/images/banner.png';
 import ExerciseIcon from '@mui/icons-material/FitnessCenter';
@@ -106,67 +107,146 @@ const WhyChooseUs = () => (
   </Box>
 );
 
-const ContactForm = () => (
-  <Box
-    sx={{
-      maxWidth: '600px',
-      mx: 'auto', // centers the form horizontally
-      px: 3, // padding left and right
-      py: 5, // padding top and bottom
-    }}
-  >
-    <Typography variant="h4" textAlign="center" gutterBottom>
-      Get In Touch
-    </Typography>
-    <Box component="form" noValidate autoComplete="off">
-      <TextField
-        fullWidth
-        label="First name"
-        margin="normal"
-        variant="outlined"
-      />
-      <TextField
-        fullWidth
-        label="Last name"
-        margin="normal"
-        variant="outlined"
-      />
-      <TextField
-        fullWidth
-        label="Email"
-        margin="normal"
-        variant="outlined"
-        type="email"
-      />
-      <TextField
-        fullWidth
-        label="Message"
-        margin="normal"
-        variant="outlined"
-        multiline
-        rows={4}
-      />
-      <Box textAlign="center" mt={2}>
-        <Button variant="contained" color="primary">
-          SEND
-        </Button>
-      </Box>
+
+const ContactForm = () => {
+  const [state, handleSubmit] = useForm("meqygzyp");  // Replace "meqygzyp" with your actual Formspree form ID
+  const [formValues, setFormValues] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    message: '',
+  });
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormValues({ ...formValues, [name]: value });
+  };
+
+  const isFormValid = () => {
+    return (
+      formValues.firstName.trim() !== '' &&
+      formValues.lastName.trim() !== '' &&
+      formValues.email.trim() !== '' &&
+      formValues.message.trim() !== ''
+    );
+  };
+
+  const handleSubmitForm = (event) => {
+    event.preventDefault();
+    if (isFormValid()) {
+      handleSubmit(event);
+      setSubmitted(true);
+    } else {
+      alert('Please fill in all required fields.');
+    }
+  };
+
+  return (
+    <Box
+      sx={{
+        maxWidth: '600px',
+        mx: 'auto', // centers the form horizontally
+        px: 3, // padding left and right
+        py: 5, // padding top and bottom
+      }}
+    >
+      {submitted ? (
+        <Typography variant="h4" textAlign="center" gutterBottom sx={{ color: 'blue', fontWeight: 'bold', fontSize: '24px' }}>
+          Thank you for submitting!
+        </Typography>
+      ) : (
+        <Box component="form" onSubmit={handleSubmitForm} noValidate autoComplete="off">
+          <Typography variant="h4" textAlign="center" gutterBottom>
+            Get In Touch
+          </Typography>
+          <TextField
+            fullWidth
+            id="firstName"
+            name="firstName"
+            label="First Name"
+            variant="outlined"
+            margin="normal"
+            required
+            value={formValues.firstName}
+            onChange={handleInputChange}
+          />
+          <TextField
+            fullWidth
+            id="lastName"
+            name="lastName"
+            label="Last Name"
+            variant="outlined"
+            margin="normal"
+            required
+            value={formValues.lastName}
+            onChange={handleInputChange}
+          />
+          <TextField
+            fullWidth
+            id="email"
+            name="email"
+            label="Email"
+            variant="outlined"
+            margin="normal"
+            required
+            value={formValues.email}
+            onChange={handleInputChange}
+          />
+          <TextField
+            fullWidth
+            id="message"
+            name="message"
+            label="Message"
+            variant="outlined"
+            multiline
+            rows={4}
+            margin="normal"
+            required
+            value={formValues.message}
+            onChange={handleInputChange}
+          />
+          <Button type="submit" variant="contained" color="primary" disabled={state.submitting}>
+            Submit
+          </Button>
+          <ValidationError
+            prefix="Oops!"
+            field="firstName"
+            errors={state.errors}
+          />
+          <ValidationError
+            prefix="Oops!"
+            field="lastName"
+            errors={state.errors}
+          />
+          <ValidationError
+            prefix="Oops!"
+            field="email"
+            errors={state.errors}
+          />
+          <ValidationError
+            prefix="Oops!"
+            field="message"
+            errors={state.errors}
+          />
+        </Box>
+      )}
     </Box>
-  </Box>
-);
+  );
+};
 
-
-// You can create a parent component that includes all the sections of the page
 const MainPage = () => (
   <>
+    {/* Your existing components */}
     <HeroBanner />
-    <AboutFitTrack />
-    <WhyChooseUs />
-    <ContactForm />
-  
+    <AboutFitTrack id="about" />
+    <WhyChooseUs id="why-choose-us" />
+    
+    {/* Include ContactForm component */}
+    <ContactForm id="contact" />
   </>
 );
 
-export default MainPage; 
+export default MainPage;
 
 
