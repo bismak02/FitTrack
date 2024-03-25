@@ -31,7 +31,56 @@ The cluster operates on the `192.168.172.0/24` CIDR block. DNS for each system i
 ## Building Infrastructure
 
 ### 1. Using Packer Templates
-Navigate to the `jhajek` GitHub repo for templates. Fill out `variables.pkr.hcl` for the Vault Server and execute `packer init .`, `packer validate .`, and `packer build .`.
+Navigate to the group GitHub repo and go into team01o-2024\build\proxmox-cloud-production-templates\packer for packer templates and team01o-2024\build\proxmox-cloud-production-templates\terraform for the terraform files needed to deploy said templated. Fill out `template-for-variables.pkr.hcl` for the packer templates then rename it to `variables.pkr.hcl` you can then execute `packer init .`, `packer validate .`, and `packer build .`.
+
+But first to make sure that you enter the right variables for the packer template, you should ssh into our vault server with the following command 
+
+ssh -i `path-to-your-authorized-vault-ssh-key` vagrant@system86.rice.iit.edu 
+
+If you cant ssh in contact the PM or the previous IT Ops person.
+
+Once you are inside the vault server theres a few things you may have to do:
+
+- If the vault server is sealed, make sure to unseal it using 3 keys, ask the PM or the previous IT Ops person for this
+- If vault is denying your access to the secret but it isnt sealed, chances are the user tokens expired and new ones must be made, or you mistyped your user token in your .bashrc file
+- If everything is working you may add secrets to the vault, use the syntax in chapter 13.6 found in the vault tooling assignment
+
+So concerning the vault setup for a new IT Ops person, you want to ssh into vault as early as possible, then create your user token with permission to the teams secrets with the following command:
+
+`vault token create -ttl=21600m -policy=team01o-policy`
+
+the output will look something like this:
+
+```
+User token
+Key                  Value
+---                  -----
+token                hvs.CAESILKPfgdiKVYCIvRY_ENKciEBtoiqcaqm4gfwFIBM7UbGGh4KHGh2cy5qZmNvbFNzRmEwMmJBSGFmWktIZjVwMVc
+token_accessor       4pitf1xzh87oNChbXOJExtxD
+token_duration       360h
+token_renewable      true
+token_policies       ["default" "team01o-policy"]
+identity_policies    []
+policies             ["default" "team01o-policy"]
+```
+Save the output somewhere safe and then copy the token value, in this case `hvs.CAESILKPfgdiKVYCIvRY_ENKciEBtoiqcaqm4gfwFIBM7UbGGh4KHGh2cy5qZmNvbFNzRmEwMmJBSGFmWktIZjVwMVc`
+
+Then you will exti the vault server by typing `exit`
+
+Go to your home directory, `cd ~`
+
+Then edit your bashrc file `vim .bashrc`
+
+and add these lines at the bottom:
+
+```
+export VAULT_ADDR='https://team-01o-vault-server-vm0.service.consul:8200'
+export VAULT_SKIP_VERIFY="true"
+export VAULT_TOKEN="hvs.CAESILKPfgdiKVYCIvRY_ENKciEBtoiqcaqm4gfwFIBM7UbGGh4KHGh2cy5qZmNvbFNzRmEwMmJBSGFmWktIZjVwMVc"
+```
+make sure you replace the vault_token value with the user token you just generated
+
+after this you will have a connection to the vault server so the packer templates can properly pull for the vault secrets. Just make sure you are pulling the right secrets, the templates should be pulling the correct ones but check just incase.
 
 ### 2. Deploying Instances with Terraform
 Automate deployment with Terraform commands: `terraform init`, `terraform validate`, and `terraform apply`.
