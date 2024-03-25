@@ -23,6 +23,10 @@ By the end of sprint 03, we were able to deploy a three tier infrastructure alth
 We continued to use Trello for this sprint to manage the individual tasks that we had to do for our respective roles. The 25 points were split up between the tasks based on difficulty and importance.
 ![screens](images/trello-board.png)
 
+# Team setup
+Our IT Ops person made a guide for future IT Ops or other members
+![screens](images/guide.png)
+
 # Team Goals and Deliverables
 
 As shown in our trello board we initially set a plan for a few specific deliverables, the first being of our infrastructure.
@@ -84,7 +88,12 @@ This page calculates bmi and other information and it will be very easy to imple
 
 Main contributor: Bisma, Azzam
 
+## Tracker Page
+This page lets a user track what exercises they have done and how many calories it burns
 
+![tracker](images/tracker.png)
+
+Main contributor: Bisma, Azzam
  
 
 # Conclusion
