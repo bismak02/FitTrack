@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import ExercisePage from './pages/Exercisepage';
 import LoginPage from './pages/LoginPage';
 import CalcPage from './pages/CalcPage'; 
+import TrackPage from './pages/TrackPage'; 
 
 const App = () => (
   <Box width="400px" sx={{ width: { xl: '1488px' } }} m="auto">
@@ -20,9 +21,9 @@ const App = () => (
       <Route path="/exercise" element={<ExercisePage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/calc" element={<CalcPage />} />
-      
+      <Route path="/track" element={<TrackPage />} />
     </Routes>
-    <Footer />
+    <Footer showDescription={true} />
   </Box>
 );
 
