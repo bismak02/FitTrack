@@ -11,6 +11,8 @@ import ExercisePage from './pages/Exercisepage';
 import LoginPage from './pages/LoginPage';
 import CalcPage from './pages/CalcPage'; 
 import TrackPage from './pages/TrackPage'; 
+import BlogPage from './pages/BlogPage';
+import BlogPost from './components/BlogPost';
 
 const App = () => (
   <Box width="400px" sx={{ width: { xl: '1488px' } }} m="auto">
@@ -22,6 +24,9 @@ const App = () => (
       <Route path="/login" element={<LoginPage />} />
       <Route path="/calc" element={<CalcPage />} />
       <Route path="/track" element={<TrackPage />} />
+      <Route path="/blog" element={<BlogPage />} />
+      <Route path="/blog" element={<BlogPage />} />
+      <Route path="/blog/:slug" element={<BlogPost />} />
     </Routes>
     <Footer showDescription={true} />
   </Box>
