@@ -1,63 +1,74 @@
 import React, { useState } from 'react';
-import { Box, TextField, Button, Grid, Typography } from '@mui/material';
+import { Box, TextField, Button, Grid, Link, Typography } from '@mui/material';
 import { useForm, ValidationError } from '@formspree/react';
-
+import { useNavigate } from 'react-router-dom';
 import HeroBannerImage from '../assets/images/banner.png';
 import ExerciseIcon from '@mui/icons-material/FitnessCenter';
 import NutritionIcon from '@mui/icons-material/Restaurant';
 import BookIcon from '@mui/icons-material/Chat';
 import GroupIcon from '@mui/icons-material/People';
 
-const HeroBanner = () => (
-  <Box
-    sx={{
-      mt: { lg: '50px', xs: '70px' },
-      position: 'relative',
-      m: 0,
-      p: 0,
-      width: '100%',
-      height: '100vh',
-      backgroundImage: `url(${HeroBannerImage})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center', 
-      alignItems: 'center' 
-    }}
-  >
-    <Typography
-      color="white"
-      fontWeight={700}
-      sx={{
-        fontSize: { lg: '44px', xs: '40px' },
-        textAlign: 'center',
-        maxWidth: '90%', 
-        p: '20px', 
-      }}
-    >
-      Reach Your <br />
-      Fitness Goals
-    </Typography>
+const HeroBanner = () => {
+  const navigate = useNavigate();
 
-    <a href="/login" style={{ textDecoration: 'none', width: '200px', textAlign: 'center', background: '#123A6D', padding: '14px', fontSize: '22px', textTransform: 'none', color: 'white', borderRadius: '4px', marginTop: '20px' }}>Sign up!</a>
-    
-    <Typography
-      fontWeight={600}
-      color="#123A6D"
+  const handleSignUpClick = () => {
+    navigate('/login');
+  };
+
+  return (
+    <Box
       sx={{
-        opacity: '0.1',
-        display: { lg: 'block', xs: 'none' },
-        fontSize: '200px',
-        position: 'absolute',
-        bottom: 0,
-        right: 0,
+        mt: { lg: '50px', xs: '70px' },
+        position: 'relative',
+        m: 0,
+        p: 0,
+        width: '100%',
+        height: '100vh',
+        backgroundImage: `url(${HeroBannerImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center', 
+        alignItems: 'center'
       }}
     >
-      Exercise
-    </Typography>
-  </Box>
+      <Typography
+        color="white"
+        fontWeight={700}
+        sx={{
+          fontSize: { lg: '44px', xs: '40px' },
+          textAlign: 'center',
+          maxWidth: '90%', 
+          p: '20px', 
+        }}
+      >
+        Reach Your <br />
+        Fitness Goals
+      </Typography>
+
+      <Button
+          onClick={handleSignUpClick}
+          sx={{
+            width: '200px',
+            textAlign: 'center',
+            background: '#123A6D',
+            padding: '14px',
+            fontSize: '22px',
+            color: 'white',
+            borderRadius: '4px',
+            marginTop: '20px',
+            '&:hover': {
+              background: '#0f2a4d',
+            },
+          }}
+        >
+          Sign up!
+        </Button>
+        
+    </Box>
 );
+};
 
 const AboutFitTrack = () => (
   <Box sx={{
