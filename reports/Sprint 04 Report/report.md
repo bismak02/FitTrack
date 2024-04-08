@@ -1,4 +1,4 @@
-# Sprint-03 Project Manager Report
+# Sprint-04 Project Manager Report
 
 ## Introduction of your teammates
 
@@ -14,9 +14,9 @@ IT Operations and Security - Azzam
 
 # Introduction
 
-In sprint 03 the team focused on creating a proper three tier infrastructure and adding more functionality to our fitness tracker app. This sprint began with a frontend packer template and server which was manually hosting our webapp. Our webapp only had basic functions such as a home page with some information, a login page, and a signup page, but these pages were just skeletons with no functionality.
+In sprint 04 the team focused on creating a proper three tier infrastructure and adding more functionality to our fitness tracker app. This sprint began with a frontend packer template and server which was manually hosting our webapp. Our webapp only had basic functions such as a home page with some information, a login page, and a signup page, but these pages were just skeletons with no functionality.
 
-By the end of sprint 03, we were able to deploy a three tier infrastructure although we are still working on hosting our webapp on our front end, we also made some of the databases we need for the webapp and inserted some records into them. Due to complications and our lack of experience we werent able to fully implement our front end development with our infrastructure since our infrastructure took us longer than we initally estimated, this lead to our developers building the website on the localhost for testing purposes, our webapp has a working authentication method with google auth, a calculator page that calculates different things about the user such as BMI, and an exercise page in which users can select which exercises they did to log them. We also were able to catch up on a few things from last sprint, such as developing our scripts for automated install, and developing a small guide to help future IT Ops persons.
+By the end of sprint 04, we were able to deploy a three tier infrastructure although we are still working on hosting our webapp on our front end, we also made some of the databases we need for the webapp and inserted some records into them. Due to complications and our lack of experience we werent able to fully implement our front end development with our infrastructure since our infrastructure took us longer than we initally estimated, this lead to our developers building the website on the localhost for testing purposes, our webapp has a working authentication method with google auth, a calculator page that calculates different things about the user such as BMI, and an exercise page in which users can select which exercises they did to log them. We also were able to catch up on a few things from last sprint, such as developing our scripts for automated install, and developing a small guide to help future IT Ops persons.
 
 # Project Management Tool
 
