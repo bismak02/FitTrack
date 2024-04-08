@@ -2,15 +2,15 @@
 
 ## Introduction of your teammates
 
-Project Manager - Martin
+Project Manager - Mbargou Gueye
 
-Developer 1 - Sufyan
+Developer 1 - Bisma
 
-Developer 2 - Azzam
+Developer 2 - Martin
 
-UI/UX and User Testing - Bisma
+UI/UX and User Testing - Sufyan
 
-IT Operations and Security - Mbargou
+IT Operations and Security - Azzam
 
 # Introduction
 
