@@ -13,16 +13,15 @@ sudo apt-get install -y nodejs
 sudo npm install -g npm@9.6.0
 
 # Change directory to the location of your JS code
-cd /home/vagrant/team01o-2024/build/proxmox-cloud-production-templates/code/express-static-app/
+cd /home/vagrant/team01o-2024/design/code/client/
 
 # Use NPM package manager to install needed dependecies to run our EJS app
 # https://github.com/motdotla/dotenv -- create a .env file to pass environment variables
 # dotenv mysql2 packages will be installed in the package.json file
-sudo npm install -g --save express ejs pm2
-
+sudo npm install react-scripts
 # pm2.io is an applcation service manager for Javascript applications
 # Using pm2 start the express js application as the user vagrant
-sudo -u vagrant pm2 start server.js
+sudo -u vagrant npm start
 
 # This creates your javascript application service file
 sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u vagrant --hp /home/vagrant
