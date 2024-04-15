@@ -40,11 +40,12 @@ const Navbar = () => {
         fontSize="24px"
         alignItems="center"
         >
-        {(location.pathname.includes('/exercise') || location.pathname.includes('/track') || location.pathname.includes('/calc')) ? (
+        {(location.pathname.includes('/exercise') || location.pathname.includes('/track')|| location.pathname.includes('/blog')  || location.pathname.includes('/calc')) ? (
           <>
             <Link to="/exercise" style={{ textDecoration: 'none', color: 'white' }}>Exercises</Link>
             <Link to="/calc" style={{ textDecoration: 'none', color: 'white' }}>Calculator</Link>
             <Link to="/track" style={{ textDecoration: 'none', color: 'white' }}>Tracker</Link>
+            <Link to="/blog" style={{ textDecoration: 'none', color: 'white' }}>Blog</Link>
           </>
         ) : (
           <>
