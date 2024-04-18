@@ -15,20 +15,20 @@ sudo npm install -g npm@9.6.0
 # Change directory to the location of your JS code
 cd /home/vagrant/team01o-2024/design/code/client/
 
-# Use NPM package manager to install needed dependecies to run our EJS app
-# https://github.com/motdotla/dotenv -- create a .env file to pass environment variables
-# dotenv mysql2 packages will be installed in the package.json file
+# Downloading necessary react scripts
 sudo npm install react-scripts
-# pm2.io is an applcation service manager for Javascript applications
-# Using pm2 start the express js application as the user vagrant
-sudo -u vagrant npm start
 
-# This creates your javascript application service file
-sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u vagrant --hp /home/vagrant
 
-# This saves which files we have already started -- so pm2 will 
-# restart them at boot
-sudo -u vagrant pm2 save
+# Making an optimized build of the react app
+sudo -u vagrant npm run build
+
+# installing serve so we can serve the webapp properly
+sudo npm install -g serve
+
+# Will serve the react based webapp on port 3000
+serve -s build -l 3000
+
+
 
 ###############################################################################
 # Using Find and Replace via sed to add in the secrets to connect to MySQL
