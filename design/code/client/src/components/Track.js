@@ -66,7 +66,17 @@ const FitnessTracker = () => {
     setFood('');
     setFoodCalories('');
   };
-
+  const handleDeleteFitnessLog = (index) => {
+    const newFitnessLogs = [...fitnessLogs];
+    newFitnessLogs.splice(index, 1);
+    setFitnessLogs(newFitnessLogs);
+  };
+  
+  const handleDeleteNutritionLog = (index) => {
+    const newNutritionLogs = [...nutritionLogs];
+    newNutritionLogs.splice(index, 1);
+    setNutritionLogs(newNutritionLogs);
+  };
   return (
     <div style={{ padding: '20px', maxWidth: '800px', margin: 'auto' }}>
       <div style={{ marginBottom: '40px' }}>
@@ -80,7 +90,7 @@ const FitnessTracker = () => {
           </select>
           <input type="text" value={duration} onChange={(e) => setDuration(e.target.value)} placeholder="Duration (minutes)" style={{ padding: '10px', width: '200px' }} />
           <input type="number" value={calories} onChange={(e) => setCalories(e.target.value)} placeholder="Calories Burned" style={{ padding: '10px', width: '200px' }} />
-          <input type="number" value={weight} onChange={(e) => setWeight(e.target.value)} placeholder="Weight (kg/lbs)" style={{ padding: '10px', width: '200px' }} />
+          <input type="number" value={weight} onChange={(e) => setWeight(e.target.value)} placeholder="Weight (lbs)" style={{ padding: '10px', width: '200px' }} />
           <select value={mood} onChange={(e) => setMood(e.target.value)} style={{ padding: '10px', width: '220px' }}>
             <option value="">Select Workout Mood</option>
             {workoutMoods.map(mood => (
@@ -90,19 +100,20 @@ const FitnessTracker = () => {
           <button onClick={handleAddFitnessLog} style={{ padding: '10px', width: '200px', background: '#123A6D', color: '#fff' }}>Add Fitness Log</button>
         </div>
         <div style={{ marginTop: '20px' }}>
-          <h2>Fitness Logs</h2>
-          {fitnessLogs.length > 0 ? fitnessLogs.map((log, index) => (
-            <div key={index} style={{ background: '#f3f3f3', margin: '10px 0', padding: '10px', borderRadius: '8px' }}>
-              <p>Date: {log.date.toLocaleString()}</p>
-              <p>Workout: {log.workout}</p>
-              <p>Duration: {log.duration} minutes</p>
-              <p>Calories Burned: {log.calories}</p>
-              <p>Weight: {log.weight}</p>
-              <p>Mood: {log.mood}</p>
-            </div>
-          )) : <p>No fitness logs to display.</p>}
-        </div>
+    <h2>Fitness Logs</h2>
+    {fitnessLogs.length > 0 ? fitnessLogs.map((log, index) => (
+      <div key={index} style={{ background: '#f3f3f3', margin: '10px 0', padding: '10px', borderRadius: '8px' }}>
+        <p>Date: {new Date(log.date).toLocaleString()}</p>
+        <p>Workout: {log.workout}</p>
+        <p>Duration: {log.duration} minutes</p>
+        <p>Calories Burned: {log.calories}</p>
+        <p>Weight: {log.weight}</p>
+        <p>Mood: {log.mood}</p>
+        <button onClick={() => handleDeleteFitnessLog(index)} style={{ backgroundColor: '#123A6D', color: 'white', padding: '5px 10px' }}>Delete</button>
       </div>
+    )) : <p>No fitness logs to display.</p>}
+  </div>
+</div>
 
       
       <div style={{ marginBottom: '40px' }}>
@@ -118,16 +129,17 @@ const FitnessTracker = () => {
           <button onClick={handleAddNutritionLog} style={{ padding: '10px', width: '200px', background: '#123A6D', color: '#fff', border: 'none', borderRadius: '5px' }}>Add Nutrition Log</button>
         </div>
         <div style={{ marginTop: '20px' }}>
-          <h2>Nutrition Logs</h2>
-          {nutritionLogs.length > 0 ? nutritionLogs.map((log, index) => (
-            <div key={index} style={{ background: '#f3f3f3', margin: '10px 0', padding: '10px', borderRadius: '8px' }}>
-              <p>Date: {log.date.toLocaleString()}</p>
-              <p>Food: {log.food}</p>
-              <p>Calories: {log.calories}</p>
-            </div>
-          )) : <p>No nutrition logs to display.</p>}
-        </div>
+        <h2>Nutrition Logs</h2>
+    {nutritionLogs.length > 0 ? nutritionLogs.map((log, index) => (
+      <div key={index} style={{ background: '#f3f3f3', margin: '10px 0', padding: '10px', borderRadius: '8px' }}>
+        <p>Date: {new Date(log.date).toLocaleString()}</p>
+        <p>Food: {log.food}</p>
+        <p>Calories: {log.calories}</p>
+        <button onClick={() => handleDeleteNutritionLog(index)} style={{ backgroundColor: '#123A6D', color: 'white', padding: '5px 10px' }}>Delete</button>
       </div>
+    )) : <p>No nutrition logs to display.</p>}
+  </div>
+</div>
     </div>
   );
 };
