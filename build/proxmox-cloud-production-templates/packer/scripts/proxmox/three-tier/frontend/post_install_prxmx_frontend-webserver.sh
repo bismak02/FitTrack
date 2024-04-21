@@ -18,25 +18,25 @@ cd /home/vagrant/team01o-2024/design/code/client/
 # Downloading necessary react scripts
 sudo npm install react-scripts
 
-# Use NPM package manager to install needed dependecies to run our EJS app
-# https://github.com/motdotla/dotenv -- create a .env file to pass environment variables
-# dotenv mysql2 packages will be installed in the package.json file
-sudo npm install -g --save express ejs pm2
-
-sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u vagrant --hp /home/vagrant
-
-sudo -u vagrant pm2 save
-
-sudo pm2 startup
-
 # Making an optimized build of the react app
-sudo -u vagrant npm run build
+sudo npm run build
+
+# Installing pm2 to keep our server running
+sudo npm install pm2@latest -g
 
 # installing serve so we can serve the webapp properly
-sudo -u vagrant npm install -g serve
+sudo npm install -g serve
 
-# Will serve the react based webapp on port 3000
-sudo -u vagrant pm2 serve build 3000 --spa
+# Running our server with pm2 and serve
+pm2 serve build 3000 --spa
+
+# Saving this setup so pm2 runs on startup
+sudo pm2 startup
+
+pm2 save
+
+
+
 
 
 
