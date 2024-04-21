@@ -31,9 +31,11 @@ sudo npm install -g serve
 pm2 serve build 3000 --spa
 
 # Saving this setup so pm2 runs on startup
-sudo pm2 startup
+sudo -u vagrant pm2 startup
 
-pm2 save
+sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u vagrant --hp /home/vagrant
+
+sudo -u vagrant pm2 save
 
 
 
