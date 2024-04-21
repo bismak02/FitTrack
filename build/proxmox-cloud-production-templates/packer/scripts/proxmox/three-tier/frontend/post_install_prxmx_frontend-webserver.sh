@@ -33,10 +33,10 @@ sudo -u vagrant pm2 save
 sudo -u vagrant npm run build
 
 # installing serve so we can serve the webapp properly
-sudo npm install -g serve
+sudo -u vagrant npm install -g serve
 
 # Will serve the react based webapp on port 3000
-pm2 serve build 3000 --spa
+sudo pm2 serve build 3000 --spa
 
 
 
