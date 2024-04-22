@@ -38,9 +38,14 @@ The application was fully deployed on proxmox. Each component, including the bac
 I will now demonstrate:
 
 1. **Login of a user**: Here, a user logs into the system using their credentials.
+
 ![alt text](image-5.png)
 2. **Uploading Progress**: After logging in, the user can track their nutrition and fitness. 
+
+![alt text](image-7.png)
 3. **Editing their Progress**: The user can then log out and back in and change any progress
+
+![alt text](image-8.png)
 
 Here are the images of the team members ability to log in and perform these steps to confirm the functionality and collaborative aspects of the application:
 
@@ -48,8 +53,10 @@ Here are the images of the team members ability to log in and perform these step
 ![alt text](image-6.png)
 
 - Martin
+![alt text](image-9.png)
 - Gueye
 - Sufiyan
+![alt text](image-10.png)
 - Azzam
 
 
