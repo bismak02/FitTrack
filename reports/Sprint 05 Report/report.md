@@ -50,15 +50,15 @@ I will now demonstrate:
 Here are the images of the team members ability to log in and perform these steps to confirm the functionality and collaborative aspects of the application:
 
 - Bisma
-![alt text](image-6.png)
-
+![alt text](image-6.png)\
 - Martin
 ![alt text](image-9.png)
 - Gueye
+![alt text](image-11.png)
 - Sufiyan
 ![alt text](image-10.png)
 - Azzam
-
+![alt text](image-12.png)
 
 ## Conclusion
 In conclusion, our project successfully integrated multiple components of software development, from initial planning and design to deployment and testing. The tools and methods we utilized facilitated effective teamwork and project management. This report and our presentation have documented our journey, showcasing both challenges and achievements. We have demonstrated how collaborative efforts coupled with robust project management can lead to the successful completion of a software project.
