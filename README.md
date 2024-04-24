@@ -37,5 +37,5 @@ To run the application on your local machine, follow these steps:
 
 ## Contact
 
-Your Name - [bismak0220@gmail.com](mailto:bismak0220@gmail.com)
+Bisma Khan - [bismak0220@gmail.com](mailto:bismak0220@gmail.com)
 
